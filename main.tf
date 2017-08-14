@@ -7,11 +7,10 @@ provider "google" {
  credentials = "${var.credentials}"
 }
 
-data "google_compute_zones" "available" {}
 
 resource "google_compute_instance" "default" {
  project = "${var.project_name}"
- zone = "${data.google_compute_zones.available.names[0]}"
+ zone = "us-central-1a"
  name = "tf-compute-1"
  machine_type = "f1-micro"
  boot_disk {
