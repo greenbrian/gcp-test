@@ -10,7 +10,7 @@ provider "google" {
 
 resource "google_compute_instance" "default" {
  project = "${var.project_name}"
- zone = "us-central-1a"
+ zone = "us-central1-a"
  name = "tf-compute-1"
  machine_type = "f1-micro"
  boot_disk {
