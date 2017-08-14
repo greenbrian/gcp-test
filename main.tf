@@ -7,8 +7,6 @@ provider "google" {
  credentials = "${var.credentials}"
 }
 
-data "google_compute_zones" "available" {}
- 
 resource "google_compute_instance" "default" {
  project = "${var.project_name}"
  zone = "us-central1-a"
